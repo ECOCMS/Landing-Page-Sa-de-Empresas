@@ -1,0 +1,85 @@
+@font-face {
+    font-family: 'DrukWide';
+    src: url('../fonts/DrukWideBold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+}
+
+*{
+    margin: 0;
+    font-family: "Poppins";
+    font-weight: 400;
+}
+
+body{
+    background-color: #111111;
+    color: black;
+    overflow-x: hidden;
+}
+
+header{
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    background-color: black;
+}
+header .header-container{
+    max-width: 1250px;
+    margin: 0 auto;
+    padding: 15px 40px;
+    gap: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.menu-toggle{       /* Botão hambúrguer escondido no desktop */
+    display: none;
+    background: transparent;
+    border: none;
+    color: #ffa017;
+    font-size: 30px;
+    cursor: pointer;
+    padding: 10px;
+    border: 2px solid red !important;
+}
+
+.menu{        /* Menu de navegação principal */
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.menu .navegacao{
+    white-space: nowrap;
+    font-size: 17px;
+    font-weight: 300;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-decoration: none;
+    color: #ffa017;
+}
+
+.menu .navegacao:hover{
+    transform: scale(1.1);
+    transition: 0.4s ease-out;
+}
+
+.menu .chat_whatsapp_one{
+    padding: 10px;
+    border-radius: 15px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-decoration: none;
+    font-weight: 600;
+    color: white;
+    background-color: #ffa017;
+
+}
+
+.menu .chat_whatsapp_one:hover{
+    transform: scale(1.1);
+    transition: 0.4s ease-out;  
+}
+
+
+

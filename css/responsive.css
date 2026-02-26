@@ -1,0 +1,277 @@
+@font-face {
+    font-family: 'DrukWide';
+    src: url('../fonts/DrukWideBold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+}
+
+*{
+    margin: 0;
+    font-family: "Poppins";
+    font-weight: 400;
+}
+
+                                /* Cabeçalho */
+@media (max-width: 768px) {  
+    .menu-toggle {
+        display: block; 
+        position: relative;
+        z-index: 1001; /* Garante que o botão fique SEMPRE acima do menu */
+        border: none !important; /* Removi a borda vermelha de teste */
+    }
+
+    .menu {
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: 70%;
+        height: 100vh;
+        background-color: #111111; /* Fundo escuro para combinar com o site */
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 30px;
+        
+        /* O menu começa 100% fora da tela à direita */
+        transform: translateX(100%); 
+        transition: transform 0.4s ease-in-out;
+        z-index: 1000; /* Fica abaixo do botão toggle */
+        box-shadow: -5px 0 15px rgba(0,0,0,0.8);
+    }
+
+    /* Classe que o JS vai adicionar */
+    .menu.active {
+        transform: translateX(0); /* Traz o menu de volta para a tela */
+    }
+
+    .menu .navegacao, .menu .chat_whatsapp_one {
+        width: 80%;
+        text-align: center;
+        white-space: normal; 
+    }
+}
+
+                                /* Container one*/
+@media (max-width: 768px) {
+    .container_one .message_title{
+        font-size: 25px;
+        margin-top: 40px;
+    }
+
+    .container_one .message {
+        font-size: 13px;
+        margin-top: 30px;
+    }
+    .space{
+        display: block;
+    }
+
+    .block .video_container {
+        width: 300px;
+        border-radius: 30px;
+        border: 1px solid #ffa017;
+        box-shadow: 0px 0px 40px 1px #ffa017;
+    }
+
+    .play-btn{
+        width: 40px;
+        height: 40px;
+        font-size: 20px;
+    }
+
+    .block .chat_container{
+        padding: 10px 20px;
+    }
+
+    .block .chat_container .chat_whatsapp_two{
+        padding: 10px 20px;
+        font-size: 12px;
+        margin: 30px;
+    }
+
+    .container_two .container_messages .message_title_dep{
+        font-size:23px;
+        font-weight: 800;
+        color: #000000;
+    }
+
+    .container_two .container_messages .message_dep{
+        font-size: 12px;
+        margin-top: 20px;
+        color: #5a5a5a;
+    }
+
+    .container_two .container_deps_video .depoimentos{
+        margin: 20px;
+        display: flex;
+        justify-content: center;
+        list-style: none;
+        gap: 30px;
+        padding: 0;
+    }
+
+    .container_two .container_deps_video .depoimentos .dep_video .video_container{
+        position: relative;
+        width: 250px;
+        margin: 0 auto;
+        border-radius: 30px;
+        border: 1px solid #ffa017;
+        box-shadow: 0px 0px 10px 1px #ffa017;
+    }
+}
+
+                                /* container two */
+                                /* videos */
+@media (max-width: 768px) {
+    
+    /* Faz a lista de depoimentos permitir scroll horizontal */
+    .container_two .container_deps_video .depoimentos {
+        display: flex !important;
+        flex-direction: column !important; 
+        width: 260px;
+        margin: 0 auto;
+        gap: 20px;
+       
+    }
+
+    /* Esconde a barra de scroll no Chrome/Safari/Edge */
+    .container_two .container_deps_video .depoimentos::-webkit-scrollbar{
+        display: none;
+    }
+
+    .container_two .container_deps_video .depoimentos .dep_video {
+        flex: 0 0 80vw; /* Cada vídeo ocupa 80% da largura da tela */
+        scroll-snap-align: center;
+        list-style: none;
+        margin: 0 !important;
+    }
+
+    /* Ajusta o tamanho dos itens para caberem no carrossel */
+    .container_two .container_deps_video .depoimentos .dep_video{
+        flex: 0 0 85%;
+        scroll-snap-align: center;
+    }
+
+    /* Ajusta o container do vídeo para ser responsivo dentro do li */
+    .container_two .container_deps_video .depoimentos .dep_video .video_container {
+        width: 100% !important;
+        max-width: 100% !important;
+    }  
+}   
+
+                                /* container two */
+                                /* imagens */
+@media (max-width: 768px){
+
+    .container_two .container_deps_message div img{
+        width: 15px;
+    }
+
+    .container_two .container_deps_message div .message_title{
+        padding: 5px;
+        font-size: 15px;
+        font-weight: 700;
+    }
+
+    .container_two .container_deps_message .depoimentos {
+        display: flex;
+        overflow-x: auto; 
+        scroll-snap-type: x mandatory;
+        -webkit-overflow-scrolling: touch;
+        gap: 20px;
+        padding: 20px;
+        scrollbar-width: none;
+    }
+
+    .container_two .container_deps_message .depoimentos::-webkit-scrollbar {
+        display: none;
+    }
+
+    .container_two .container_deps_message .depoimentos .dep_img {
+        flex: 0 0 85%; 
+        scroll-snap-align: center; 
+    }
+
+    .container_two .container_deps_message {
+        width: 90%; 
+        height: auto;
+        margin: 30px auto;
+    }
+
+    .container_two .container_deps_message .depoimentos{
+        width: 200px; /* Altura fixa para as imagens no celular */
+        margin: 0 auto;
+    }
+
+    .container_two .container_deps_message .depoimentos .dep_img {
+        box-shadow: none;
+        border: 3px solid #ffa017;
+        height: 100%;
+        width: 100%; /* Altura fixa para as imagens no celular */
+    }
+}
+
+                                /* container three */
+@media (max-width: 768px){
+    .container_three .message_one{
+        font-size: 10px;
+        padding: 5px 10px;
+    }
+
+    .container_three .message_title{
+        font-size: 25px;
+    }
+
+    .container_three .message_two{
+        font-size: 12px;
+    }
+
+    .container_three .chat_whatsapp_three{
+        padding: 20px 80px;
+        font-size: 18px;
+    }
+
+    .container_three .message_three{
+        font-size: 12px;
+    }
+
+}
+
+                                /* Rodapé */
+@media (max-width: 768px){
+    .prod_and_fc{
+        justify-content: center;
+    }
+
+    .prod_and_fc .container .title_produtos,
+    .prod_and_fc .container .title_fc{
+        font-size: 15px;
+    }
+
+    .prod_and_fc .container ul li,
+    .prod_and_fc .container .general_data p,
+    .prod_and_fc .container .general_data a{
+        list-style: circle;
+        font-size: 15px;
+    }
+
+    .company_messager .message{
+        text-align: center;
+        font-size: 10px;
+    }
+
+    .prod_and_fc .container{
+        width: 27rem;
+        margin: 0px auto ;
+        padding: 15px;
+    }
+
+    .additional_data{
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+        gap: 20px;
+        font-size: 12px; 
+    }    
+}   

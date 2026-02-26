@@ -1,0 +1,97 @@
+@font-face {
+    font-family: 'DrukWide';
+    src: url('../fonts/DrukWideBold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+}
+
+*{
+    margin: 0;
+    font-family: "Poppins";
+    font-weight: 400;
+}
+
+footer{
+    background-image: url('../img/BG.png');
+    background-size: cover;
+    color: white;
+    padding: 60px 0;
+    
+}
+
+.prod_and_fc{
+    display: flex;
+    justify-content: space-around;
+}
+
+.prod_and_fc .container{
+    width: 35rem;
+}
+
+.prod_and_fc .container .title_produtos{
+    font-family: 'drukWide', sans-serif;
+    font-size: 20px;
+    color: #ffffff;
+}
+
+.prod_and_fc .container ul{
+    list-style: none;
+    margin-top: 10px;
+    padding: 0px;
+    line-height: 1.8;
+}
+
+.prod_and_fc .container ul li{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 18px;
+}
+
+.prod_and_fc .container .title_fc{
+    font-family: 'drukWide', sans-serif;
+    font-size: 20px;
+    color: #ffffff;
+}
+
+.prod_and_fc .container .general_data{
+    margin-top: 10px;
+}
+
+.prod_and_fc .container .general_data p{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 18px;
+    line-height: 1.8;
+}
+
+.prod_and_fc .container .general_data a{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 18px;
+    line-height: 1.8;
+    color: #ffa017;
+    text-decoration: none;
+}
+
+.company_messager{
+    width: 85%;
+    margin: 40px auto 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.company_messager .message{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 12px;
+    line-height: 1.8;
+}
+
+.additional_data{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 70px;
+    font-size: 15px;
+    line-height: 1.5;
+}
+
+.additional_data p{
+    font-family: 'Montserrat', sans-serif;
+}
